@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meló Vadász</title>
+    <link rel="stylesheet" href="./melovadasz.css">
+</head>
+<body>
+<script src="./melovadasz.js"></script>
+
+<div class="container">
+    <header class="head">
+        <img src="./1600w-qt_TMRJF4m0.webp" alt="MelóVadász" id="banner">
+        <h1>Meló Vadász</h1>
+    </header>
+
+ <div class="navbar">
+        <button><a href="./melovadasz.html">Főoldal</a></button>
+        <div class="dropdown">
+        <button class="dropbtn">Állásaink</button>
+          <div class="dropdown-content">
+            <a href="./melovadasz_fizikai.html">Fizikai munkák</a>
+            <a href="./melovadasz_szellemi.html">Szellemi munkák</a>
+            <a href="./melovadasz_egyeb.html">Egyéb munkák</a>
+        </div>
+        </div>
+        <button><a href="./melovadasz_ref.html">Referenciák</a></button>
+        <button><a href="./melovadasz_kapcs.html">Kapcsolat</a></button>
+</div>
+
+    <main>
+        <h2>Köszöntünk a Meló Vadász oldalán!</h2>
+        <h3>Cégünk 1989 óta foglalkozik munkaerő-kölcsönzéssel és -közvetítéssel. Oldalunkon több mint 200 állás közül válogathatsz, hogy
+            megtaláld számodra a legmegfelelőbbet.
+        </h3>
+        
+        <p>Legyen szó könnyű munkákról, vagy egyszerű de gyors munkákról, itt megtalálsz mindent amire szükséged van!</p>
+
+        <p>Íme egy rövid bemutatkozó videónk:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6HDAT0dDXH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </main>
+    <content>
+        <h2>Regisztrálj hozzánk!</h2>
+        <form action="mvadasz.php" method="post">
+            <div>
+                <label for="nev">Név</label>
+                <input type="text" name="nev" id="nev" required title="Írd be a neved!"><br>
+                <label for="email">E-mail</label>
+                <input type="email" name="mail" id="mail" 
+                title="Ügyelj a pontos címre!">
+
+            </div>
+            <div>
+                <input type="checkbox" name="felhasznalasiFeltetel" id="felhasznalasiFeltetel">
+                <label for="felhasznalasiFeltetel">Elfogadom a felhasználási feltételeket</label>
+            </div>
+            <div>
+                <input type="radio" name="name" id="ferfi">
+                <label for="ferfi">Férfi</label>
+                <input type="radio" name="neme" id="no">
+                <label for="no">Nő</label>
+            </div>
+            <div>
+                <p>Várjuk az üzenetét!</p>
+                <textarea name="uzenet" id="uzenet" cols="30" rows="10"></textarea>
+            </div>
+            <input type="submit" value="Küldés">
+            <input type="reset" value="Törlés">
+        </form>
+
+
+        <h2 class="szamold">Számold ki mennyit fogsz keresni!</h2>
+        <form action="mvadasz.php" name="szamold" method="post">
+            <label for="brutto">Bruttó béred:</label>
+            <input type="number" name="brutto" id="bruttos" required>Ft<br>
+            <label for="netto">Nettó béred:</label>
+            <input type="number" name="netto" id="netto" readonly>Ft <br>  
+            <input type="button" value="Kiszámol" id="kiszamol" onClick="szamol()">
+            <input type="reset" value="Újra" id="ujra" onClick="torles()"><br><br>             
+        </form>
+    </content>
+    <footer>
+        <div class="foot">
+        <p>Általános szerződési feltételek</p>
+        <p>Rólunk</p>
+        <p>Kapcsolat</p>
+        <p>Elérhetőségek</p>
+    </div>
+    </footer>
+</div>
+</body>
+</html>
